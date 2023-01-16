@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro</title>
+</head>
+<body>
+    
+    <div id="resultado">
+        
+    </div>
+
+    <script>
+
+        var resultado = document.getElementById('resultado');
+        var codigo = parseInt(prompt(`Bienvenido, Digite el codigo del carro que desea comprar: 
+                                    Modelo        ||  Precio       ||  Código
+                                    Ford Fiesta   || 68'000'000    ||     1  
+                                    Ford Focus    || 75'000'000    ||     2 
+                                    ,0`));
+        if (codigo == 1){
+            var precio = 68000000;
+            var descuento = precio*0.05;
+            var preciofinal = precio-descuento;
+
+            resultado.innerHTML = ("<h1>Felicidades por su Ford Fiesta</h1> <br> ha recibido el 5% de descuento, el precio final de su compra es de: " + preciofinal + " pesos");
+        } else if (codigo == 2){
+            var precio = 75000000;
+            var descuento = precio*0.1;
+            var preciofinal = precio-descuento;
+
+            resultado.innerHTML = ("<h1>Felicidades por su Ford Focus</h1> <br> ha recibido el 10% de descuento, el precio final de su compra es de: " + preciofinal + " pesos");
+        } else {
+            resultado.innerHTML = ("<p> Error: El código no existe, por favor reinicie la página e ingrese un codigo correcto </p>");
+        }
+
+        
+    </script>
+</body>
+</html>

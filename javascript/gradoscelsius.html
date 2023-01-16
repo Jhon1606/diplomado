@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <div id="grado">
+
+    </div>
+
+    <script>
+        var grado = parseInt(prompt("Ingrese una temperatura en grado °Celsius:","0"));
+
+        var conversion = grado*1.8+32;
+
+        var resultado = document.getElementById("grado").innerHTML = (`<h1> Convertidor de grado °Celsius a °Fahrenheit </h1> 
+        <br> <p> La temperatura ingresada en grados °Fahrenheit es: ${conversion} </p> `);
+    </script> -->
+
+    <h1> Convertidor de grado °Celsius a °Fahrenheit </h1> 
+
+    <form name="resultado">
+        <input type="text" name="grado">
+        <input type="button" value="Calcular" onclick="convertir(resultado.grado.value)"> 
+    </form>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+         function convertir(ngrado){
+            var conversion = document.getElementById("result");
+            var grado = parseInt(ngrado);
+            if(isNaN(grado)){
+                conversion.innerHTML = "No es un número, por favor ingrese un dato valido";
+                console.log("No es un número, por favor ingrese un dato valido");
+            }
+            else {
+                var formula = grado*1.8+32;
+                conversion.innerHTML = `<p> La temperatura ingresada en grados °Fahrenheit es: ${formula} <br>
+                El valor ingresado en grados °celsius fue: ${grado}  <br>
+                La formula de conversion es: ${grado} * 1.8 + 32 = ${formula} </p>` ;
+                console.log("Convertidor de grado °Celsius a °Fahrenheit, La temperatura ingresada en grados °Fahrenheit es:" + formula +" ");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="resultado">
+        <label> Introduzca el grado °Fahrenheit: </label> 
+        <input type="text" name="grado">
+        <input type="button" value="Calcular" onclick="convertir(resultado.grado.value)"> 
+    </form>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+         function convertir(ngrado){
+            var conversion = document.getElementById("result");
+            var grado = parseInt(ngrado);
+
+            if(isNaN(grado)){
+                conversion.innerHTML = "No es un número, por favor ingrese un dato valido";
+            } else{
+                if(grado >= 14 && grado <= 32){
+                    conversion.innerHTML = "<p> Temperatura baja </p>";
+                }
+                else if(grado >= 32 && grado <= 68){
+                    conversion.innerHTML = "<p> Temperatura adecuada </p>";
+                }
+                else if(grado >= 68 && grado <= 96){
+                    conversion.innerHTML = "<p> Temperatura alta </p>";
+                } else{
+                    conversion.innerHTML = "<p> Temperatura desconocida </p>";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

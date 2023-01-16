@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="numero()">Probar</button>
+    
+    
+    
+
+
+    <script>
+        function numero(){
+            var n = prompt("Introduzca un número: ","0");
+
+            if (isNaN(n)){
+                document.write("Error: no es un número");
+            } else{
+                var resultado = n*0.1;
+                document.write("El 10% del numero ingresado es: " +resultado);
+            
+            }
+        }
+    </script>
+</body>
+</html>
