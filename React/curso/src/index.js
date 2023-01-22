@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Hola, Saludo } from "./Hola";
-import Product from "./Product";
+// import { Hola, Saludo } from "./Hola";
+// import Product, {UserCard} from "./Product";
+// import {Button} from "./Button";
+import TaskCard from './Task';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -15,9 +18,26 @@ root.render(
         {/* <Hola/>
         <Saludo/>
         <Product/> */}
-        <Product message="Hola Jhon" />
+        {/* <Product message="Hola Jhon" />
         <Product message="Hola React" />
-        <Product message="Ultimo msj" />
+        <Product message="Ultimo msj" /> */}
+
+        {/* <Button text="Haz clic aqui"/>
+        <Button text="Click me" name="Jhon"/>
+        <Button text="boton"/> */}
+
+        {/* <UserCard 
+            name="Jhon Barros"
+            amount={3000}
+            married={true}
+            points={[99,33.8,22.2]} // Se pone [] porque points vendria siendo un arreglo
+            address={{
+                street: "123 Main Street",
+                city: "New York"
+            }} //Se pone {} Porque address vendria siendo un objeto
+        /> */}
+
+        <TaskCard/>
     </>
 );
 
