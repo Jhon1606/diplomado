@@ -12,6 +12,8 @@ export function Button({text,name}){
 
 Button.propTypes = {
     text: PropTypes.string.isRequired
+    /* Sirve para decirle que el props de text debe recibir un string y debe ser requerido, en caso no cumpla con 
+    estas condiciones saldrá un error */
 };
 
 Button.defaultProps = {

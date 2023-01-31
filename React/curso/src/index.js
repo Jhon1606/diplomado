@@ -1,15 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import App from "./App";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// import { Hola, Saludo } from "./Hola";
-// import Product, {UserCard} from "./Product";
-// import {Button} from "./Button";
+import { Hola, Saludo } from "./Hola";
+import Product, {UserCard} from "./Product";
+import {Button} from "./Button";
 import TaskCard from './Task';
+import {Posts} from './Posts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const handleChange = (e) => {
+    console.log('Valor del input:' + e.target.value)
+    console.log('id del input' + e.target.id)
+}
 
 // Importamos el archivo Hola (La que exportamos en ésa misma) Y le decimos que traiga la funcion Hola que es la que se encuentra dentro de los corchetes {}
 
@@ -37,7 +42,24 @@ root.render(
             }} //Se pone {} Porque address vendria siendo un objeto
         /> */}
 
-        <TaskCard/>
+        {/* <TaskCard ready={true}/>
+        <input id="hola" onChange={function (e){ //e.target.id para mostrar el id en consola. e significa event
+            console.log(e.target.value + '...');
+        }} />
+        <input id="hola" onChange={(e) => { //Otra manera de hacerlo definiendo la función de una manera dsitinta
+            console.log(e.target.value + '...');
+        }} />
+        <input id="hola" onChange={handleChange} />
+        <form onSubmit={(e) => {
+            e.preventDefault()
+            console.log('enviado');
+         }}> 
+            <h1>Registro de usuario</h1>
+            <button>Send</button>
+        </form> */}
+
+        <Posts/>
+
     </>
 );
 
