@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo inicial HTML to REACT</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function DatoInfo() {
+            return (
+                <div>
+                    <a href="https://reactjs.org">React - Una librería de Javascript para construir webs</a>
+                    <div>React te ayuda a construir UserInterfaces.</div>
+                    <br></br>
+                </div>
+            );
+        }
+        function DatoInfo2() {
+            return (
+                <div>
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gato-1603975456.gif?resize=320:*" alt="gato" />
+                    <div>Gato</div>
+                    <br></br>
+                </div>
+            );
+        }
+        function App() {
+            return (<section>
+                <DatoInfo />
+                <DatoInfo2 />
+                
+            </section>);
+        } ReactDOM.render(<App />, document.getElementById("root"));   
+    </script>
+</body>
+</html>
