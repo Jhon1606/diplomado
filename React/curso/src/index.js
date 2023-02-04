@@ -8,6 +8,7 @@ import Product, {UserCard} from "./Product";
 import {Button} from "./Button";
 import TaskCard from './Task';
 import {Posts} from './Posts';
+import Prueba from './Prueba';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -59,6 +60,7 @@ root.render(
         </form> */}
 
         <Posts/>
+        <Prueba/>
 
     </>
 );
