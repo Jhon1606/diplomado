@@ -9,6 +9,7 @@ import {Button} from "./Button";
 import TaskCard from './Task';
 import {Posts} from './Posts';
 import Prueba from './Prueba';
+import Arreglos from './Arreglos';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,6 +19,27 @@ const handleChange = (e) => {
 }
 
 // Importamos el archivo Hola (La que exportamos en ésa misma) Y le decimos que traiga la funcion Hola que es la que se encuentra dentro de los corchetes {}
+
+const datos = [
+    {
+        id: 1,
+        nombre: 'Jhon',
+        apellido: 'Barros',
+        edad: 22 
+    },
+    {
+        id: 2,
+        nombre: 'Jesus',
+        apellido: 'Hernandez',
+        edad: 25 
+    },
+    {
+        id: 3,
+        nombre: 'Juan',
+        apellido: 'Zapata',
+        edad: 28 
+    }
+]
 
 root.render(
     <>
@@ -61,6 +83,7 @@ root.render(
 
         <Posts/>
         <Prueba/>
+        <Arreglos/>
 
     </>
 );
